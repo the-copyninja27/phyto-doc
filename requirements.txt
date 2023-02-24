@@ -4,3 +4,4 @@
 
 azure-functions
 Pillow
+onnxruntime==1.14.0

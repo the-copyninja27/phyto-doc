@@ -1,9 +1,11 @@
 import logging
 import azure.functions as func
 from PIL import Image
+import onnxruntime
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
+    ort_session = onnxruntime.InferenceSession("models/plant-disease.onnx")
     logging.info('Python HTTP trigger function processed a request.')
     name = req.params.get('name')
     if not name:
