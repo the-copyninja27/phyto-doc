@@ -1,6 +1,6 @@
 import logging
-
 import azure.functions as func
+from PIL import Image
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
@@ -13,7 +13,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             pass
         else:
             name = req_body.get('name')
-
     if name:
         return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
     else:
