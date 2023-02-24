@@ -5,3 +5,8 @@
 azure-functions
 Pillow
 onnxruntime==1.14.0
+numpy==1.24.2
+requests
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==1.13.1+cpu
+torchvision==0.14.1+cpu
